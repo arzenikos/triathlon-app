@@ -1,13 +1,18 @@
-import { Storage } from './storage.js';
 import { TrainingDrill } from './drill.js';
 
 export class Training {
-	constructor(newDate = new Date(), newLocation, kmDistanceRequirement = 26.55, targetSpeed = 37.16) {
-		this.date = newDate;
-		this.location = newLocation;
+	constructor(newDate = new Date(2024, 3, 3), newLocation, kmDistanceRequirement = 26.55, targetSpeed = 37.16) {
+		// Handle if first argument is a string (location passed as first arg)
+		if (typeof newDate === 'string') {
+			this.date = new Date(2024, 3, 3);
+			this.location = newDate;
+		} else {
+			this.date = newDate;
+			this.location = newLocation;
+		}
 		this.distance = kmDistanceRequirement
 		this.speed = targetSpeed
-		this.drillCount = 0; // ? increasing value
+		this.drillCount = 0;
 		this.allDrillsLog = [];
 	}
 
@@ -26,7 +31,7 @@ export class Training {
 	getAllDrills() {
 		let result = `${this.toString()}`
 		for (let aDrill of this.allDrillsLog) {
-			result += `${aDrill}`
+			result += aDrill.toString()
 		}
 		return result
 	}
@@ -68,8 +73,8 @@ export class Training {
 		this.sortDrills();
 		let passedDrills = {}
 		for (const aDrill of this.allDrillsLog) {
-			if (aDrill.isGoalReached()) {
-				passedDrills["Time: " + aDrill.time] = aDrill.calculateSpeed() + "kph"
+			if (aDrill.isGoalReached(this.distance, this.speed)) {
+				passedDrills["Time: " + aDrill.time] = aDrill.calculateSpeed(this.distance) + "kph"
 			}
 		}
 		return passedDrills;
@@ -88,10 +93,11 @@ export class Training {
 	}
 
 	removeDrill(targetDrillStartTime) { // Time
-		const isPresent = this.findTrainingDrill(targetDrillStartTime) !== null;
+		const foundDrill = this.findTrainingDrill(targetDrillStartTime);
+		const isPresent = foundDrill !== null;
 		let result = null;
 		if (isPresent) {
-			const index = this.allDrillsLog.indexOf(targetDrillStartTime);
+			const index = this.allDrillsLog.indexOf(foundDrill);
 			this.allDrillsLog.splice(index, 1);
 			this.drillCount -= 1;
 			result = this.allDrillsLog;
@@ -102,13 +108,13 @@ export class Training {
 	calculateAvgSpeed() { // Kph //by dates
 		let cumulativeSpeed = 0;
 		for (const aDrill of this.allDrillsLog) {
-			cumulativeSpeed += aDrill.calculateSpeed();
+			cumulativeSpeed += aDrill.calculateSpeed(this.distance);
 		}
 		return parseFloat((cumulativeSpeed / this.drillCount).toFixed(2));
 	}
 
 	isGoalReached() {
-		return this.calculateSpeed() >= this.targetSpeed
+		return this.calculateAvgSpeed() >= this.speed
 	}
 
 	updateDrill(startTime, keyItem, valueReplacement) {

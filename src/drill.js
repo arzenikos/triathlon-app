@@ -6,7 +6,13 @@ export class TrainingDrill {
 	// targetSpeed = 37.16 //kph
 	// YYYY - M+1 - D1
 	constructor(newDateTime = new Date(2024,3,5,0,0), newSwimmingDuration = 0.0, newRunningDuration = 0.0, newCyclingDuration = 0.0) {
-		this.dateTimeId = newDateTime
+		// Handle string time input
+		if (typeof newDateTime === 'string') {
+			const [hours, minutes] = newDateTime.split(':');
+			this.dateTimeId = new Date(2024, 3, 5, parseInt(hours), parseInt(minutes));
+		} else {
+			this.dateTimeId = newDateTime;
+		}
 		this.date = undefined
 		this.time = undefined
 		this.swimTime = newSwimmingDuration
@@ -17,7 +23,7 @@ export class TrainingDrill {
 	toString() {
 		this.formatDateTime()
 		let result
-		result = `\n[Date: ${this.date} Drill Start Time: ${this.time}]\n`
+		result = `\n[Drill Start Time: ${this.time}]\n`
 		result += `Swimming - ${this.swimTime.toFixed(2)} seconds\n`
 		result += `Running - ${this.runTime.toFixed(2)} seconds\n`
 		result += `Cycling - ${this.bikeTime.toFixed(2)} seconds`
@@ -60,13 +66,13 @@ export class TrainingDrill {
 	}
 
 	// Calculate speed to kph
-	calculateSpeed(distanceKm) {
+	calculateSpeed(distanceKm = 26.55) {
 		const durationHr = this.calculateTotalDuration()
+		if (durationHr === 0) return 0;
 		return parseFloat((distanceKm / durationHr).toFixed(2))
 	}
 
-	isGoalReached(distanceKm,targetSpeed) {
-		// const targetSpeed = 37.16
+	isGoalReached(distanceKm = 26.55, targetSpeed = 37.16) {
 		return this.calculateSpeed(distanceKm) >= targetSpeed
 	}
 }
