@@ -1,9 +1,11 @@
-# Triathlon App 🏊‍♂️🚴‍♂️🏃‍♂️
+<div align="center">
+   <img width="100" height="100" alt="triathlon-app-logo" src="https://github.com/user-attachments/assets/0979260e-0e43-4e11-965c-1cca5e793c0b" />
+
+   # Triathlon App 🏊‍♂️🚴‍♂️🏃‍♂️
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black)
 ![React](https://img.shields.io/badge/React-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Claude](https://img.shields.io/badge/Claude-%23D97757.svg?style=for-the-badge&logo=anthropic&logoColor=white)
 ![NodeJS](https://img.shields.io/badge/Node.js-%236DA55F.svg?style=for-the-badge&logo=node.js&logoColor=white)
 ![Jest](https://img.shields.io/badge/Jest-%23C21325.svg?style=for-the-badge&logo=jest&logoColor=white)
 
@@ -12,13 +14,39 @@
 >
 > A web application built with **React JS / TypeScript** to help triathletes track and analyze their training across swimming, cycling, and running. Designed for both casual enthusiasts and competitive athletes to log sessions, monitor progress, and visualize performance trends.  
 
----
+~✦~
 
-## Demo
-🔗** Live Demo:** [ link to be added ] 
+[![Live Demo](https://img.shields.io/badge/Download_APK-Live%20Demo%20-181717?style=for-the-badge&logo=android&labelColor=gray)]()
+[![Video Demo](https://img.shields.io/badge/YouTube-View%20Recorded%20Demo-1a1a2e?style=for-the-badge&logo=youtube&labelColor=16213e)]()
 
-**Snapshots**
-![Triathlon App Screenshot](./assets/screenshot.png)
+</div>
+
+<table>
+  <tr>
+      <td><img width="433" height="287" alt="image" src="https://github.com/user-attachments/assets/e8c011aa-665a-4254-86a3-333c022a1d8f" /></td>
+      <td><img width="433" height="287" alt="image" src="https://github.com/user-attachments/assets/e8c011aa-665a-4254-86a3-333c022a1d8f" /></td>
+      <td><img width="433" height="287" alt="image" src="https://github.com/user-attachments/assets/e8c011aa-665a-4254-86a3-333c022a1d8f" /></td>
+  </tr>
+  <tr>
+      <td>
+          <ul>
+              <li>Sample UI description</li>
+          </ul>
+      </td>
+      <td>
+          <ul>
+              <li>Sample UI description</li>
+          </ul>
+      </td>
+      <td>
+          <ul>
+              <li>Sample UI description</li>
+          </ul>
+      </td>
+    </tr>
+</table>
+
+[![📖 Wiki — Iterations](https://img.shields.io/badge/📖_Wiki-Iterations_⊿_-1a1a2e?style=for-the-badge&labelColor=16213e)](https://github.com/arzenikos/triathlon-app/wiki/Iterations) ![FFBB00](https://img.shields.io/badge/FFBB00-ffbb00?style=for-the-badge&logoColor=black)
 
 ---
 
