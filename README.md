@@ -22,6 +22,12 @@
 </div>
 
 <table>
+   <tr>
+    <td colspan="3" align="center">
+      <img src="https://img.shields.io/badge/FFBB00-FFBB00?style=for-the-badge&logoColor=white" />
+      <img src="https://img.shields.io/badge/FFFFFF-FFFFFF?style=for-the-badge&logoColor=white" />
+    </td>
+  </tr> 
   <tr>
       <td><img width="433" height="287" alt="image" src="https://github.com/user-attachments/assets/e8c011aa-665a-4254-86a3-333c022a1d8f" /></td>
       <td><img width="433" height="287" alt="image" src="https://github.com/user-attachments/assets/e8c011aa-665a-4254-86a3-333c022a1d8f" /></td>
@@ -46,8 +52,7 @@
     </tr>
 </table>
 
-[![📖 Wiki — Iterations](https://img.shields.io/badge/📖_Wiki-Iterations_⊿_-1a1a2e?style=for-the-badge&labelColor=16213e)](https://github.com/arzenikos/triathlon-app/wiki/Iterations) ![FFBB00](https://img.shields.io/badge/FFBB00-ffbb00?style=for-the-badge&logoColor=black)
-
+> 📖 [See Wiki](https://github.com/arzenikos/triathlon-app/wiki/Development-Iterations) for the iteration snapshots.
 ---
 
 ## Features
@@ -132,3 +137,7 @@ npm start
 > **Disclaimer**
 >
 > All the content presented here is the result of my own individual work, and any resemblance to other works is purely coincidental. If you are a student, please refrain from using or copying this work in any way that violates the principles of academic honesty and integrity.
+
+---
+
+Created by Arsenie — 2024
