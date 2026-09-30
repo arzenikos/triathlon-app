@@ -37,16 +37,28 @@ Merges into `main` once stable
 
 <!-- START_STRUCTURE -->
 ```text
-src/
-├── app.js                     # Timer and application flow
-├── TrainingSessionStore.js    # Browser persistence
-├── training-session.js        # Duration and speed insights
-└── styles.css                 # Responsive app styling
+.
+├── README.md
+├── babel.config.cjs
+├── babel.config.js
+├── index.html
+├── jest.config.cjs
+├── jest.config.js
+├── package.json
+├── src
+│   ├── TrainingSessionStore.js
+│   ├── app.js
+│   ├── athlete.js
+│   ├── styles.css
+│   ├── training-session.js
+│   └── triathlon.js
+├── structure.txt
+└── test
+    ├── athlete_specs
+    ├── specs
+    └── triathlon_specs
 
-test/
-└── specs/session.spec.js      # Session persistence and insight tests
-
-index.html                     # App entry point
+6 directories, 14 files
 ```
 <!-- END_STRUCTURE -->
 
