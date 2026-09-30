@@ -20,9 +20,16 @@
 
 ## Branch Note
 - **Branch**: `feature/timer-segment`  
-- **Purpose**:
+- **Status**: Ready for Release
 - **Release Version**: `v1.3.0`
-- **Key Points**: []
+- **Summary**: Core functionality rebuilt, stale assets removed, and full drill → training workflow implemented.
+- **Key Points**: 
+   - Rebuilt base app flow; removed unused/stale files across the directory.
+   - Added digital timer + segment‑end flag button for Run → Bike → Swim sequence.
+   - Implemented drill creation: each completed segment set is saved as a drill.
+   - Added training session flow: athlete fills name + location; ID auto‑filled; timestamp captured.
+   - Training sessions now saved, displayed in table, and enriched with calculated insights.
+
 Merges into `main` once stable
 > `⎇` See [ Branch Info](https://github.com/arzenikos/triathlon-app/wiki) for more information
 
@@ -45,6 +52,14 @@ index.html                     # App entry point
 
 ## Features
 
+- **Multi-sport Logging** – Record swimming, cycling, and running sessions with distance, duration, and notes.  
+- **Progress Tracking** – Visualize improvements over time with charts and summaries.  
+- **Responsive Design** – Works on desktop and mobile devices.  
+- **TypeScript Integration** – Type-safe codebase for reliability and maintainability.  
+- **Customizable Workouts** – Add personalized training plans and goals.  
+- **Data Persistence** – Store and retrieve sessions using local storage or an API backend (optional).  
+
+
 ### Recording a session
 1. Start the timer for the Run segment.
 2. Press the flag button at the end of Run, Bike, and Swim. The timer resets between segments and follows the required sequence.
@@ -65,17 +80,55 @@ npm run dev
 ```bash
 npm test -- --runInBand
 ```
+---
+
+## Installation
+
+1. Clone the repository:  
+
+```bash
+git clone https://github.com/arsenie-sarmiento/triathlon-app.git
+cd triathlon-app
+```
+
+2. Install dependencies:
+```
+npm install
+```
+
+3. Start the development server:
+```
+npm start
+```
+
+## Usage
+
+1. Sign up or log in (if authentication is implemented).
+2. Add your training sessions for each sport.
+3. Track your weekly/monthly performance via dashboards.
+4. Set goals and view charts to monitor your progress.
+
+
+## Future Improvements
+- Integration with external APIs (e.g., Strava, Garmin)
+- User authentication & profile management
+- Export training data to CSV or PDF
+- Mobile app version with React Native
+- Automated unit and integration testing with Jest and React Testing Library, with potential CI integration
 
 ---
 
 > [!WARNING]
-> ## Important Notice: Academic Integrity
+>
+> ![IMPORTANT_NOTICE-_Academic_Integrity](https://img.shields.io/badge/IMPORTANT_NOTICE-_Academic_Integrity-%23800000.svg?style=for-the-badge&logoColor=white)
+> 
 > **BCDE211 - Best Programming Practices (Web and Mobile Development)**
 > 
 > This portfolio contains original work completed as part of my BCDE211 - Best Programming Practices (Web and Mobile Development) course at Ara Institute of Canterbury. I do not condone plagiarism or academic misconduct in any form. This project is for academic purposes only and is not intended to be copied or used without proper authorisation.
 > The university has a STRICT policy on academic misconduct, and I fully support this policy. Any attempt to plagiarize, copy, or use this work as your own will result in serious consequences. Please respect academic integrity and do not attempt to pass off this work as your own.
 >
-> ## **Disclaimer**
+> **Disclaimer**
+>
 > All the content presented here is the result of my own individual work, and any resemblance to other works is purely coincidental. If you are a student, please refrain from using or copying this work in any way that violates the principles of academic honesty and integrity.
 
 ---

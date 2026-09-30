@@ -7,16 +7,8 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-
 # Build output
-dist/
-dist-ssr/
 .output/
-
-# Dependencies
-node_modules/
-package-lock.json
-*.local
 
 # Vite specific
 .vite/
@@ -27,6 +19,14 @@ package-lock.json
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Dependencies
+node_modules/
+package-lock.json
+dist/
+dist-ssr/
+*.local
+
 
 # Editor directories and files
 .cursor/*
@@ -50,25 +50,9 @@ report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 .DS_Store
 Thumbs.db
 
-
 # Security
 **/*.key
 **/*.crt
 **/*.der
 **/*.cer
 **/*.cnf
-
-
-
-# Environment variables
-.env
-.env.*
-!.env.example
-.env.production
-.env.local
-.env.development
-
-
-# Editor directories and files
-.vscode/*
-.cursor/*

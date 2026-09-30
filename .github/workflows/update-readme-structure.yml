@@ -8,8 +8,7 @@ on:
       - 'assets/**'
     branches:
       - main
-      - dev
-      - triathlon_1.0
+      - develop
 
 jobs:
   update-readme:
