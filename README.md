@@ -1,7 +1,7 @@
 <div align="center">
    <img width="100" height="100" alt="triathlon-app-logo" src="https://github.com/user-attachments/assets/0979260e-0e43-4e11-965c-1cca5e793c0b" />
 
-   # Triathlon App 🏊‍♂️🚴‍♂️🏃‍♂️
+   # Sikad | Triathlon App 🏊‍♂️🚴‍♂️🏃‍♂️
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black)
 ![React](https://img.shields.io/badge/React-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
@@ -12,48 +12,43 @@
 
 > BCDE211 Best Programming Practices - JavaScript
 >
-> A web application built with **React JS / TypeScript** to help triathletes track and analyze their training across swimming, cycling, and running. Designed for both casual enthusiasts and competitive athletes to log sessions, monitor progress, and visualize performance trends.  
+> A browser-based timer for recording triathlon training drills in the sequence **Run → Bike → Swim** Built with **React JS / TypeScript** to help triathletes track and analyze their training across swimming, cycling, and running. Designed for both casual enthusiasts and competitive athletes to log sessions, monitor progress, and visualize performance trends.
 
 ~✦~
 
-[![Live Demo](https://img.shields.io/badge/Download_APK-Live%20Demo%20-181717?style=for-the-badge&logo=android&labelColor=gray)]()
-[![Video Demo](https://img.shields.io/badge/YouTube-View%20Recorded%20Demo-1a1a2e?style=for-the-badge&logo=youtube&labelColor=16213e)]()
-
 </div>
 
-<table>
-   <tr>
-    <td colspan="3" align="center">
-      <img src="https://img.shields.io/badge/FFBB00-FFBB00?style=for-the-badge&logoColor=white" />
-      <img src="https://img.shields.io/badge/FFFFFF-FFFFFF?style=for-the-badge&logoColor=white" />
-    </td>
-  </tr> 
-  <tr>
-      <td><img width="433" height="287" alt="image" src="https://github.com/user-attachments/assets/e8c011aa-665a-4254-86a3-333c022a1d8f" /></td>
-      <td><img width="433" height="287" alt="image" src="https://github.com/user-attachments/assets/e8c011aa-665a-4254-86a3-333c022a1d8f" /></td>
-      <td><img width="433" height="287" alt="image" src="https://github.com/user-attachments/assets/e8c011aa-665a-4254-86a3-333c022a1d8f" /></td>
-  </tr>
-  <tr>
-      <td>
-          <ul>
-              <li>Sample UI description</li>
-          </ul>
-      </td>
-      <td>
-          <ul>
-              <li>Sample UI description</li>
-          </ul>
-      </td>
-      <td>
-          <ul>
-              <li>Sample UI description</li>
-          </ul>
-      </td>
-    </tr>
-</table>
+## Branch Note
+- **Branch**: `feature/timer-segment`  
+- **Status**: Ready for Release
+- **Release Version**: `v1.3.0`
+- **Summary**: Core functionality rebuilt, stale assets removed, and full drill → training workflow implemented.
+- **Key Points**: 
+   - Rebuilt base app flow; removed unused/stale files across the directory.
+   - Added digital timer + segment‑end flag button for Run → Bike → Swim sequence.
+   - Implemented drill creation: each completed segment set is saved as a drill.
+   - Added training session flow: athlete fills name + location; ID auto‑filled; timestamp captured.
+   - Training sessions now saved, displayed in table, and enriched with calculated insights.
 
-> 📖 [See Wiki](https://github.com/arzenikos/triathlon-app/wiki/Development-Iterations) for the iteration snapshots.
----
+Merges into `main` once stable
+> `⎇` See [ Branch Info](https://github.com/arzenikos/triathlon-app/wiki) for more information
+
+## Project Structure
+
+<!-- START_STRUCTURE -->
+```text
+src/
+├── app.js                     # Timer and application flow
+├── TrainingSessionStore.js    # Browser persistence
+├── training-session.js        # Duration and speed insights
+└── styles.css                 # Responsive app styling
+
+test/
+└── specs/session.spec.js      # Session persistence and insight tests
+
+index.html                     # App entry point
+```
+<!-- END_STRUCTURE -->
 
 ## Features
 
@@ -64,15 +59,37 @@
 - **Customizable Workouts** – Add personalized training plans and goals.  
 - **Data Persistence** – Store and retrieve sessions using local storage or an API backend (optional).  
 
+
+### Recording a session
+1. Start the timer for the Run segment.
+2. Press the flag button at the end of Run, Bike, and Swim. The timer resets between segments and follows the required sequence.
+3. After Swim, the completed set is saved as a drill. Choose to create another drill or save the training session.
+4. Enter the athlete name and training location. The athlete ID is filled automatically, and the session records the current time.
+
+Completed drills and training sessions are stored in browser local storage. The session table reports drill count, total duration, average speed, and whether the 37.16 km/h target was met. Speed uses 26.55 km per drill.
+
+## Run locally
+
+```sh
+npm install
+npm run dev
+```
+
+## Running Tests
+
+```bash
+npm test -- --runInBand
+```
 ---
 
 ## Installation
 
 1. Clone the repository:  
 
-   ```bash
-   git clone https://github.com/arsenie-sarmiento/triathlon-app.git
-   cd triathlon-app
+```bash
+git clone https://github.com/arsenie-sarmiento/triathlon-app.git
+cd triathlon-app
+```
 
 2. Install dependencies:
 ```
@@ -84,39 +101,13 @@ npm install
 npm start
 ```
 
----
-
 ## Usage
+
 1. Sign up or log in (if authentication is implemented).
 2. Add your training sessions for each sport.
 3. Track your weekly/monthly performance via dashboards.
 4. Set goals and view charts to monitor your progress.
 
-## Folder Structure
-
-<!-- START_STRUCTURE -->
-```text
-.
-├── README.md
-├── babel.config.js
-├── coverage
-│   ├── clover.xml
-│   ├── coverage-final.json
-│   ├── lcov-report
-│   └── lcov.info
-├── jest.config.js
-├── package.json
-├── src
-│   ├── athlete.js
-│   └── triathlon.js
-├── structure.txt
-└── test
-    ├── athlete_specs
-    └── triathlon_specs
-
-7 directories, 10 files
-```
-<!-- END_STRUCTURE -->
 
 ## Future Improvements
 - Integration with external APIs (e.g., Strava, Garmin)
@@ -127,6 +118,8 @@ npm start
 
 ---
 
+> [!WARNING]
+>
 > ![IMPORTANT_NOTICE-_Academic_Integrity](https://img.shields.io/badge/IMPORTANT_NOTICE-_Academic_Integrity-%23800000.svg?style=for-the-badge&logoColor=white)
 > 
 > **BCDE211 - Best Programming Practices (Web and Mobile Development)**

@@ -8,15 +8,17 @@ pnpm-debug.log*
 lerna-debug.log*
 
 # Build output
-dist/
 .output/
 
-# Dependencies
-node_modules/
-package-lock.json
-dist/
-dist-ssr/
-*.local
+# Vite specific
+.vite/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # Dependencies
 node_modules/
@@ -40,7 +42,6 @@ dist-ssr/
 # Testing
 /coverage
 .nyc_output
-
 
 # Diagnostic reports (Next.js / Node.js)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json

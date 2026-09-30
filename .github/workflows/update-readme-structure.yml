@@ -8,7 +8,7 @@ on:
       - 'assets/**'
     branches:
       - main
-      - dev
+      - develop
 
 jobs:
   update-readme:
