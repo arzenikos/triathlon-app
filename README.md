@@ -1,91 +1,71 @@
 <div align="center">
    <img width="100" height="100" alt="triathlon-app-logo" src="https://github.com/user-attachments/assets/0979260e-0e43-4e11-965c-1cca5e793c0b" />
 
-# Triathlon App 🏊‍♂️🚴‍♂️🏃‍♂️
+   # Sikad | Triathlon App 🏊‍♂️🚴‍♂️🏃‍♂️
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black)
 ![React](https://img.shields.io/badge/React-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Claude](https://img.shields.io/badge/Claude-%23D97757.svg?style=for-the-badge&logo=anthropic&logoColor=white)
 ![NodeJS](https://img.shields.io/badge/Node.js-%236DA55F.svg?style=for-the-badge&logo=node.js&logoColor=white)
 ![Jest](https://img.shields.io/badge/Jest-%23C21325.svg?style=for-the-badge&logo=jest&logoColor=white)
 
 
 > BCDE211 Best Programming Practices - JavaScript
 >
-> A web application built with **JavaScript/ES6** to help triathletes track and analyze their training across swimming, cycling, and running. Designed for both casual enthusiasts and competitive athletes to log sessions, monitor progress, and visualize performance trends.  
+> A browser-based timer for recording triathlon training drills in the sequence **Run → Bike → Swim** Built with **React JS / TypeScript** to help triathletes track and analyze their training across swimming, cycling, and running. Designed for both casual enthusiasts and competitive athletes to log sessions, monitor progress, and visualize performance trends.
 
 ~✦~
 
-[![Live Demo](https://img.shields.io/badge/Download_APK-Live%20Demo%20-181717?style=for-the-badge&logo=android&labelColor=gray)]()
-[![Video Demo](https://img.shields.io/badge/YouTube-View%20Recorded%20Demo-1a1a2e?style=for-the-badge&logo=youtube&labelColor=16213e)]()
-
 </div>
-
----
 
 ## Branch Note
 - **Branch**: `feature/ui-dashboard`  
 - **Purpose**:
 - **Release Version**: `v1.2.1`
 - **Key Points**: []
-
+Merges into `main` once stable
 > `⎇` See [ Branch Info](https://github.com/arzenikos/project-name/wiki) for more information
+
 
 ## Project Structure
 
 <!-- START_STRUCTURE -->
 ```text
 src/
-├── training.js                 # Training model
-├── drill.js                   # TrainingDrill model
-├── storage.js                 # Storage facade
-├── StorageManager.js          # Singleton storage manager
-├── LocalStorageStrategy.js    # LocalStorage implementation
-├── IndexedDBStrategy.js       # IndexedDB implementation
-├── TrainingDrillFactory.js    # Factory for drill creation
-├── TrainingViewModel.js       # MVVM ViewModel for training
-└── DrillViewModel.js          # MVVM ViewModel for drills
+├── app.js                     # Timer and application flow
+├── TrainingSessionStore.js    # Browser persistence
+├── training-session.js        # Duration and speed insights
+└── styles.css                 # Responsive app styling
 
 test/
-├── training.test.js           # Training tests
-├── drill.test.js              # Drill tests
-└── storage.test.js            # Storage tests
+└── specs/session.spec.js      # Session persistence and insight tests
 
-index.html                     # Interactive UI
+index.html                     # App entry point
 ```
 <!-- END_STRUCTURE -->
 
 ## Features
 
-### Core Functionality
-- Create training sessions with date and location
-- Add training drills with swimming, running, and cycling durations
-- Calculate total duration and average speed
-- Track goal achievement (37.16 kph target speed)
-- Sort drills by time
-- Remove drills from sessions
-- Update drill values
+### Recording a session
+1. Start the timer for the Run segment.
+2. Press the flag button at the end of Run, Bike, and Swim. The timer resets between segments and follows the required sequence.
+3. After Swim, the completed set is saved as a drill. Choose to create another drill or save the training session.
+4. Enter the athlete name and training location. The athlete ID is filled automatically, and the session records the current time.
 
-### Storage Options
-- **LocalStorage**: Quick, lightweight storage for browser session
-- **IndexedDB**: Structured, persistent storage for complex data queries
+Completed drills and training sessions are stored in browser local storage. The session table reports drill count, total duration, average speed, and whether the 37.16 km/h target was met. Speed uses 26.55 km per drill.
 
-### User Interface
-- Modern, responsive design with gradient styling
-- Form-based input for creating training sessions and drills
-- Real-time performance statistics
-- Drill list with detailed metrics
-- Goal achievement indicator
-- Storage type selector (LocalStorage vs IndexedDB)
+## Run locally
+
+```sh
+npm install
+npm run dev
+```
 
 ## Running Tests
 
 ```bash
-npm test
+npm test -- --runInBand
 ```
-
-All 38 Jest tests pass with full coverage.
 
 ---
 
