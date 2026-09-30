@@ -10,125 +10,72 @@
 
 > BCDE211 Best Programming Practices - JavaScript
 >
-> A web application built with **React JS / TypeScript** to help triathletes track and analyze their training across swimming, cycling, and running. Designed for both casual enthusiasts and competitive athletes to log sessions, monitor progress, and visualize performance trends.  
+> A web application built with **JavaScript/ES6** to help triathletes track and analyze their training across swimming, cycling, and running. Designed for both casual enthusiasts and competitive athletes to log sessions, monitor progress, and visualize performance trends.  
 
 ---
 
-## Demo
-🔗** Live Demo:** [ link to be added ] 
+## Branch Note
+- **Branch**: `sandbox/triathlon_1.0`  
+- **Purpose**:
+- **Release Version**: `v1.3.0`
+- **Key Points**: []
+Merges into `release/v3.0.0` once stable
+> `⎇` See [ Branch Info](https://github.com/arzenikos/project-name/wiki) for more information
 
-**Snapshots**
-![Triathlon App Screenshot](./assets/screenshot.png)
-
----
-
-## Features
-
-- **Multi-sport Logging** – Record swimming, cycling, and running sessions with distance, duration, and notes.  
-- **Progress Tracking** – Visualize improvements over time with charts and summaries.  
-- **Responsive Design** – Works on desktop and mobile devices.  
-- **TypeScript Integration** – Type-safe codebase for reliability and maintainability.  
-- **Customizable Workouts** – Add personalized training plans and goals.  
-- **Data Persistence** – Store and retrieve sessions using local storage or an API backend (optional).  
-
----
-
-## Installation
-
-1. Clone the repository:  
-
-   ```bash
-   git clone https://github.com/arsenie-sarmiento/triathlon-app.git
-   cd triathlon-app
-
-2. Install dependencies:
-```
-npm install
-```
-
-3. Start the development server:
-```
-npm start
-```
-
----
-
-## Usage
-1. Sign up or log in (if authentication is implemented).
-2. Add your training sessions for each sport.
-3. Track your weekly/monthly performance via dashboards.
-4. Set goals and view charts to monitor your progress.
-
-## Folder Structure
+## Project Structure
 
 <!-- START_STRUCTURE -->
 ```text
-.
-├── Data
-│   ├── athlete_model.js
-│   ├── database.js
-│   ├── timer_model.js
-│   └── triathlon_model.js
-├── Presentation
-│   ├── form_view.js
-│   ├── triathlon_view.js
-│   └── triathlon_viewmodel.js
-├── README.md
-├── babel.config.js
-├── coverage
-│   ├── clover.xml
-│   ├── lcov-report
-│   └── lcov.info
-├── eslint.config.mjs
-├── index-patch-1.html
-├── index.html
-├── index.js
-├── jest.config.js
-├── note.txt
-├── package.json
-├── public
-│   └── index.html
-├── snips
-│   ├── drill_time.js
-│   └── localStorage.js
-├── src
-│   ├── Components
-│   ├── Model
-│   ├── Storage
-│   ├── View
-│   ├── ViewModel
-│   ├── athlete.js
-│   ├── controller.js
-│   ├── cycling.js
-│   ├── drill.js
-│   ├── index.js
-│   ├── running.js
-│   ├── services
-│   ├── storage.js
-│   ├── swimming.js
-│   ├── training.js
-│   ├── training_session.js
-│   ├── triathlon.js
-│   ├── triathlon_DB.js
-│   ├── view.js
-│   └── viewmodels
-├── structure.txt
-└── test
-    ├── constants
-    ├── mocks
-    ├── specs
-    └── training.test.js
+src/
+├── training.js                 # Training model
+├── drill.js                   # TrainingDrill model
+├── storage.js                 # Storage facade
+├── StorageManager.js          # Singleton storage manager
+├── LocalStorageStrategy.js    # LocalStorage implementation
+├── IndexedDBStrategy.js       # IndexedDB implementation
+├── TrainingDrillFactory.js    # Factory for drill creation
+├── TrainingViewModel.js       # MVVM ViewModel for training
+└── DrillViewModel.js          # MVVM ViewModel for drills
 
-19 directories, 36 files
+test/
+├── training.test.js           # Training tests
+├── drill.test.js              # Drill tests
+└── storage.test.js            # Storage tests
+
+index.html                     # Interactive UI
 ```
 <!-- END_STRUCTURE -->
 
-## Future Improvements
-- Integration with external APIs (e.g., Strava, Garmin)
-- User authentication & profile management
-- Export training data to CSV or PDF
-- Mobile app version with React Native
-- Automated unit and integration testing with Jest and React Testing Library, with potential CI integration
+## Features
+
+### Core Functionality
+- Create training sessions with date and location
+- Add training drills with swimming, running, and cycling durations
+- Calculate total duration and average speed
+- Track goal achievement (37.16 kph target speed)
+- Sort drills by time
+- Remove drills from sessions
+- Update drill values
+
+### Storage Options
+- **LocalStorage**: Quick, lightweight storage for browser session
+- **IndexedDB**: Structured, persistent storage for complex data queries
+
+### User Interface
+- Modern, responsive design with gradient styling
+- Form-based input for creating training sessions and drills
+- Real-time performance statistics
+- Drill list with detailed metrics
+- Goal achievement indicator
+- Storage type selector (LocalStorage vs IndexedDB)
+
+## Running Tests
+
+```bash
+npm test
+```
+
+All 38 Jest tests pass with full coverage.
 
 ---
 
@@ -141,3 +88,4 @@ npm start
 >
 > ## **Disclaimer**
 > All the content presented here is the result of my own individual work, and any resemblance to other works is purely coincidental. If you are a student, please refrain from using or copying this work in any way that violates the principles of academic honesty and integrity.
+
