@@ -1,3 +1,6 @@
+<div align="center">
+   <img width="100" height="100" alt="triathlon-app-logo" src="https://github.com/user-attachments/assets/0979260e-0e43-4e11-965c-1cca5e793c0b" />
+
 # Triathlon App 🏊‍♂️🚴‍♂️🏃‍♂️
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black)
@@ -12,14 +15,21 @@
 >
 > A web application built with **JavaScript/ES6** to help triathletes track and analyze their training across swimming, cycling, and running. Designed for both casual enthusiasts and competitive athletes to log sessions, monitor progress, and visualize performance trends.  
 
+~✦~
+
+[![Live Demo](https://img.shields.io/badge/Download_APK-Live%20Demo%20-181717?style=for-the-badge&logo=android&labelColor=gray)]()
+[![Video Demo](https://img.shields.io/badge/YouTube-View%20Recorded%20Demo-1a1a2e?style=for-the-badge&logo=youtube&labelColor=16213e)]()
+
+</div>
+
 ---
 
 ## Branch Note
-- **Branch**: `sandbox/triathlon_1.0`  
+- **Branch**: `feature/ui-dashboard`  
 - **Purpose**:
-- **Release Version**: `v1.3.0`
+- **Release Version**: `v1.2.1`
 - **Key Points**: []
-Merges into `release/v3.0.0` once stable
+
 > `⎇` See [ Branch Info](https://github.com/arzenikos/project-name/wiki) for more information
 
 ## Project Structure
@@ -89,3 +99,6 @@ All 38 Jest tests pass with full coverage.
 > ## **Disclaimer**
 > All the content presented here is the result of my own individual work, and any resemblance to other works is purely coincidental. If you are a student, please refrain from using or copying this work in any way that violates the principles of academic honesty and integrity.
 
+---
+
+Created by Arsenie — 2024
