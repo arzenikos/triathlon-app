@@ -1,26 +1,108 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#0b1725">
+		<title>Triathlon Training Tracker</title>
+		<link rel="stylesheet" href="/src/styles.css">
+	</head>
+	<body>
+		<main class="app-shell">
+			<header class="page-header">
+				<div>
+					<p class="eyebrow">TRAINING LOG</p>
+					<h1>Triathlon tracker</h1>
+					<p class="subtitle">Time each leg, save your drills, and review your training insights.</p>
+				</div>
+				<div class="sequence-chip" aria-label="Sport sequence">RUN <span>→</span> BIKE <span>→</span> SWIM</div>
+			</header>
 
-<head>
-    <meta charset="utf-8">
-    <title>Triathlon App</title>
-</head>
+			<p id="error-message" class="error-message" role="alert" hidden></p>
 
-<body>
-    <script type="module">
-        import { View }       from './src/view.js'
-        import { Controller } from './src/controller.js'
+			<section class="workspace" aria-label="Training timer and drills">
+				<div class="timer-panel panel">
+					<div class="panel-heading">
+						<div>
+							<p class="eyebrow">CURRENT SEGMENT</p>
+							<h2 id="current-segment">Run</h2>
+						</div>
+						<span id="segment-progress" class="progress-pill">Segment 1 of 3</span>
+					</div>
+					<output id="timer" class="digital-timer" aria-live="off">00:00:00</output>
+					<p class="timer-hint">Start the timer, then flag the end of each sport segment.</p>
+					<div class="timer-controls">
+						<button id="start-timer" class="button button-primary" type="button">Start sequence</button>
+						<button id="flag-segment" class="button button-flag" type="button" disabled>Flag end of Run</button>
+					</div>
+					<div class="sequence-track" aria-hidden="true">
+						<span class="track-step is-current">Run</span>
+						<span class="track-line"></span>
+						<span class="track-step">Bike</span>
+						<span class="track-line"></span>
+						<span class="track-step">Swim</span>
+					</div>
+				</div>
 
-        function main() {
-            const triathlon = Controller.setup()
-            View.clr()
-            View.out(View.displayTriathlon(triathlon))
-            View.out(View.displayAllAthletes(triathlon))
-            View.out(View.displayAthleteStats(triathlon))
-        }
+				<div class="drills-panel panel">
+					<div class="panel-heading">
+						<div>
+							<p class="eyebrow">THIS TRAINING</p>
+							<h2>Completed drills <span id="draft-count" class="count-badge">0</span></h2>
+						</div>
+					</div>
+					<p class="muted">A drill is saved when all three segments are flagged.</p>
+					<ul id="drill-list" class="drill-list"></ul>
+					<div id="drill-decision" class="decision-panel" hidden>
+						<p class="decision-title">Set saved. What would you like to do next?</p>
+						<div class="decision-actions">
+							<button id="create-another-drill" class="button button-secondary" type="button">Create another drill</button>
+							<button id="save-training" class="button button-primary" type="button">Save training session</button>
+						</div>
+					</div>
+					<form id="session-form" class="session-form" hidden>
+						<h3>Save training session</h3>
+						<label for="athlete-name">Athlete name</label>
+						<input id="athlete-name" name="athleteName" autocomplete="name" required>
+						<label for="athlete-id">Athlete ID <span class="field-note">auto-filled</span></label>
+						<input id="athlete-id" name="athleteId" readonly>
+						<label for="training-location">Training location</label>
+						<input id="training-location" name="location" autocomplete="address-level2" required>
+						<label for="current-time">Time</label>
+						<input id="current-time" name="time" readonly>
+						<button class="button button-primary" type="submit">Save session</button>
+					</form>
+				</div>
+			</section>
 
-        window.onload = main
-    </script>
-</body>
-
+			<section class="sessions-panel panel" aria-labelledby="sessions-title">
+				<div class="panel-heading">
+					<div>
+						<p class="eyebrow">SESSION HISTORY</p>
+						<h2 id="sessions-title">Training sessions</h2>
+					</div>
+					<p class="muted">Speed is calculated from 26.55 km per triathlon drill.</p>
+				</div>
+				<div class="table-scroll">
+					<table>
+						<thead>
+							<tr>
+								<th scope="col">Athlete ID</th>
+								<th scope="col">Athlete</th>
+								<th scope="col">Location</th>
+								<th scope="col">Time</th>
+								<th scope="col">Drills</th>
+								<th scope="col">Total duration</th>
+								<th scope="col">Average speed</th>
+								<th scope="col">Target (37.16 km/h)</th>
+							</tr>
+						</thead>
+						<tbody id="training-rows"></tbody>
+					</table>
+					<p id="empty-state" class="empty-state">No training sessions saved yet.</p>
+				</div>
+			</section>
+		</main>
+		<script type="module" src="/src/app.js"></script>
+	</body>
 </html>
