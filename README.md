@@ -1,5 +1,5 @@
 <div align="center">
-   <img width="100" height="100" alt="triathlon-app-logo" src="https://github.com/user-attachments/assets/0979260e-0e43-4e11-965c-1cca5e793c0b" />
+   <img width="100" height="100" alt="triathlon-app-logo" src="https://github.com/user-attachments/assets/6d2cb014-580e-4a33-a851-4538446b7bf5" />
 
    # Sikad | Triathlon App 🏊‍♂️🚴‍♂️🏃‍♂️
 
@@ -19,9 +19,10 @@
 </div>
 
 ## Branch Note
-- **Branch**: `feature/timer-segment`  
+- **Branch**: `main`  
 - **Status**: Ready for Release
 - **Release Version**: `v1.3.0`
+- **Purpose**: Primary production branch containing finalized, tested features for the Triathlon App.
 - **Summary**: Core functionality rebuilt, stale assets removed, and full drill → training workflow implemented.
 - **Key Points**: 
    - Rebuilt base app flow; removed unused/stale files across the directory.
@@ -30,7 +31,6 @@
    - Added training session flow: athlete fills name + location; ID auto‑filled; timestamp captured.
    - Training sessions now saved, displayed in table, and enriched with calculated insights.
 
-Merges into `main` once stable
 > `⎇` See [ Branch Info](https://github.com/arzenikos/triathlon-app/wiki) for more information
 
 ## Project Structure
