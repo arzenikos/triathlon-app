@@ -1,6 +1,31 @@
-# Triathlon Training Tracker
+<div align="center">
+   <img width="100" height="100" alt="triathlon-app-logo" src="https://github.com/user-attachments/assets/0979260e-0e43-4e11-965c-1cca5e793c0b" />
 
-A browser-based timer for recording triathlon training drills in the sequence **Run → Bike → Swim**.
+   # Triathlon App 🏊‍♂️🚴‍♂️🏃‍♂️
+
+![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black)
+![React](https://img.shields.io/badge/React-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![NodeJS](https://img.shields.io/badge/Node.js-%236DA55F.svg?style=for-the-badge&logo=node.js&logoColor=white)
+![Jest](https://img.shields.io/badge/Jest-%23C21325.svg?style=for-the-badge&logo=jest&logoColor=white)
+
+
+> BCDE211 Best Programming Practices - JavaScript
+>
+> A browser-based timer for recording triathlon training drills in the sequence **Run → Bike → Swim** Built with **React JS / TypeScript** to help triathletes track and analyze their training across swimming, cycling, and running. Designed for both casual enthusiasts and competitive athletes to log sessions, monitor progress, and visualize performance trends.
+
+~✦~
+
+</div>
+
+## Branch Note
+- **Branch**: `feature/timer-segment`  
+- **Purpose**:
+- **Release Version**: `v1.3.0`
+- **Key Points**: []
+Merges into `main` once stable
+> `⎇` See [ Branch Info](https://github.com/arzenikos/project-name/wiki) for more information
+
 
 ## Project Structure
 
@@ -53,3 +78,7 @@ npm test -- --runInBand
 >
 > ## **Disclaimer**
 > All the content presented here is the result of my own individual work, and any resemblance to other works is purely coincidental. If you are a student, please refrain from using or copying this work in any way that violates the principles of academic honesty and integrity.
+
+---
+
+Created by Arsenie — 2024
