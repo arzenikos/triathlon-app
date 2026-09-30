@@ -1,1 +1,84 @@
-# project_triathlon
+<div align="center">
+   <img width="100" height="100" alt="triathlon-app-logo" src="https://github.com/user-attachments/assets/0979260e-0e43-4e11-965c-1cca5e793c0b" />
+
+# Sikad | Triathlon App 🏊‍♂️🚴‍♂️🏃‍♂️
+
+![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black)
+![React](https://img.shields.io/badge/React-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![NodeJS](https://img.shields.io/badge/Node.js-%236DA55F.svg?style=for-the-badge&logo=node.js&logoColor=white)
+![Jest](https://img.shields.io/badge/Jest-%23C21325.svg?style=for-the-badge&logo=jest&logoColor=white)
+
+
+> BCDE211 Best Programming Practices - JavaScript
+>
+> A web application built with **React JS / TypeScript** to help triathletes track and analyze their training across swimming, cycling, and running. Designed for both casual enthusiasts and competitive athletes to log sessions, monitor progress, and visualize performance trends.
+
+~✦~
+
+[![Live Demo](https://img.shields.io/badge/Download_APK-Live%20Demo%20-181717?style=for-the-badge&logo=android&labelColor=gray)]()
+[![Video Demo](https://img.shields.io/badge/YouTube-View%20Recorded%20Demo-1a1a2e?style=for-the-badge&logo=youtube&labelColor=16213e)]()
+
+</div>
+
+
+## Branch Note
+- Branch: `docs`  
+- Purpose: Centralized storage for documentation artifacts only.
+- Contents: PDFs, diagrams, exported assets, reference materials.
+- Key Points:
+    - No application code; intentionally isolated from main development branches.
+    - Serves as a documentation‑only workspace for project planning and architecture.
+    - Safe location for large binary files that should not live in feature branches.
+    - GitHub workflow: none (branch does not participate in CI/CD).
+
+> ⎇ See [Wiki](https://github.com/arzenikos/triathlon-app/wiki/Development-Guide) for branch strategy and commit message standards.
+
+<table>
+   <tr>
+    <td colspan="3" align="center">
+      <img src="https://img.shields.io/badge/FFBB00-FFBB00?style=for-the-badge&logoColor=white" />
+      <img src="https://img.shields.io/badge/FFFFFF-FFFFFF?style=for-the-badge&logoColor=white" />
+    </td>
+  </tr> 
+  <tr>
+      <td><img width="433" height="287" alt="image" src="https://github.com/user-attachments/assets/e8c011aa-665a-4254-86a3-333c022a1d8f" /></td>
+      <td><img width="433" height="287" alt="image" src="https://github.com/user-attachments/assets/e8c011aa-665a-4254-86a3-333c022a1d8f" /></td>
+      <td><img width="433" height="287" alt="image" src="https://github.com/user-attachments/assets/e8c011aa-665a-4254-86a3-333c022a1d8f" /></td>
+  </tr>
+  <tr>
+      <td>
+          <ul>
+              <li>Sample UI description</li>
+          </ul>
+      </td>
+      <td>
+          <ul>
+              <li>Sample UI description</li>
+          </ul>
+      </td>
+      <td>
+          <ul>
+              <li>Sample UI description</li>
+          </ul>
+      </td>
+    </tr>
+</table>
+
+> 📖 [See Wiki](https://github.com/arzenikos/triathlon-app/wiki/Development-Iterations) for the iteration snapshots.
+---
+
+> ![IMPORTANT_NOTICE-_Academic_Integrity](https://img.shields.io/badge/IMPORTANT_NOTICE-_Academic_Integrity-%23800000.svg?style=for-the-badge&logoColor=white)
+> 
+> **BCDE211 - Best Programming Practices (Web and Mobile Development)**
+> 
+> This portfolio contains original work completed as part of my BCDE211 - Best Programming Practices (Web and Mobile Development) course at Ara Institute of Canterbury. I do not condone plagiarism or academic misconduct in any form. This project is for academic purposes only and is not intended to be copied or used without proper authorisation.
+> The university has a STRICT policy on academic misconduct, and I fully support this policy. Any attempt to plagiarize, copy, or use this work as your own will result in serious consequences. Please respect academic integrity and do not attempt to pass off this work as your own.
+>
+> **Disclaimer**
+>
+> All the content presented here is the result of my own individual work, and any resemblance to other works is purely coincidental. If you are a student, please refrain from using or copying this work in any way that violates the principles of academic honesty and integrity.
+
+---
+
+Created by Arsenie — 2024
