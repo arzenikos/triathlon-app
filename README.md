@@ -19,13 +19,12 @@
 </div>
 
 ## Branch Note
-- **Branch**: `feature/ui-dashboard`  
+- **Branch**: `feature/timer-segment`  
 - **Purpose**:
-- **Release Version**: `v1.2.1`
+- **Release Version**: `v1.3.0`
 - **Key Points**: []
 Merges into `main` once stable
-> `⎇` See [ Branch Info](https://github.com/arzenikos/project-name/wiki) for more information
-
+> `⎇` See [ Branch Info](https://github.com/arzenikos/triathlon-app/wiki) for more information
 
 ## Project Structure
 
