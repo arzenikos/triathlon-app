@@ -1,7 +1,7 @@
 <div align="center">
    <img width="100" height="100" alt="triathlon-app-logo" src="https://github.com/user-attachments/assets/0979260e-0e43-4e11-965c-1cca5e793c0b" />
 
-   # Triathlon App 🏊‍♂️🚴‍♂️🏃‍♂️
+   # Sikad | Triathlon App 🏊‍♂️🚴‍♂️🏃‍♂️
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black)
 ![React](https://img.shields.io/badge/React-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
