@@ -19,9 +19,10 @@
 </div>
 
 ## Branch Note
-- **Branch**: `feature/timer-segment`  
-- **Status**: Ready for Release
+- **Branch**: `develop`  
+- **Status**: Work in Progress
 - **Release Version**: `v1.3.0`
+- **Purpose**: Ongoing integration branch for active development, preparing core features and workflow improvements ahead of the v1.3.0 release.
 - **Summary**: Core functionality rebuilt, stale assets removed, and full drill → training workflow implemented.
 - **Key Points**: 
    - Rebuilt base app flow; removed unused/stale files across the directory.
@@ -32,6 +33,7 @@
 
 Merges into `main` once stable
 > `⎇` See [ Branch Info](https://github.com/arzenikos/triathlon-app/wiki) for more information
+
 
 ## Project Structure
 
