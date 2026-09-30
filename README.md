@@ -19,9 +19,9 @@
 </div>
 
 ## Branch Note
-- **Branch**: `feature/timer-segment`  
+- **Branch**: `feature/ui-dashboard`  
 - **Purpose**:
-- **Release Version**: `v1.3.0`
+- **Release Version**: `v1.2.1`
 - **Key Points**: []
 Merges into `main` once stable
 > `⎇` See [ Branch Info](https://github.com/arzenikos/project-name/wiki) for more information
